@@ -1,0 +1,1098 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bambú Studio | Sublimación y Diseños Personalizados</title>
+  <meta
+    name="description"
+    content="Bambú Studio: sublimación de franelas, tazas, platos, termos y bolsos. Diseños digitales, entregas en Maracay y catálogo personalizado."
+  />
+
+  <!-- Reemplaza estas rutas por tus archivos reales -->
+  <link rel="icon" type="image/png" href="favicon-bambu.png" />
+
+  <style>
+    :root {
+      --bg: #071012;
+      --bg-soft: #0c1719;
+      --card: rgba(14, 27, 29, 0.88);
+      --card-strong: rgba(11, 22, 24, 0.96);
+      --line: rgba(127, 255, 212, 0.18);
+      --text: #eefcf8;
+      --muted: #afd7ce;
+      --neon: #63ffd7;
+      --neon-2: #20f3ff;
+      --neon-dark: #0db89f;
+      --shadow: 0 0 18px rgba(99, 255, 215, 0.28), 0 0 40px rgba(32, 243, 255, 0.1);
+      --radius: 22px;
+      --max: 1200px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(32, 243, 255, 0.12), transparent 25%),
+        radial-gradient(circle at top right, rgba(99, 255, 215, 0.08), transparent 20%),
+        linear-gradient(180deg, #050b0c 0%, #071012 100%);
+      color: var(--text);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(100% - 2rem, var(--max));
+      margin: 0 auto;
+    }
+
+    .section {
+      padding: 5.5rem 0;
+    }
+
+    .section-title {
+      font-size: clamp(1.7rem, 4vw, 2.8rem);
+      line-height: 1.1;
+      margin-bottom: 1rem;
+      letter-spacing: -0.03em;
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      color: var(--neon);
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    .section-kicker::before {
+      content: "";
+      width: 34px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--neon));
+      box-shadow: var(--shadow);
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .btn,
+    button {
+      border: 0;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.65rem;
+      padding: 0.95rem 1.35rem;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--neon), var(--neon-2));
+      color: #031012;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(99, 255, 215, 0.3);
+    }
+
+    .btn:hover,
+    button:hover {
+      transform: translateY(-2px);
+    }
+
+    .glow-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+      backdrop-filter: blur(8px);
+    }
+
+    /* NAV */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(4, 10, 11, 0.82);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(99, 255, 215, 0.1);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 78px;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      width: 52px;
+      height: 52px;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 1px solid rgba(99, 255, 215, 0.18);
+      box-shadow: var(--shadow);
+      background: #0a1517;
+    }
+
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 600;
+      padding: 0.4rem 0.55rem;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--neon);
+      text-shadow: 0 0 12px rgba(99, 255, 215, 0.25);
+    }
+
+    /* HERO */
+    .hero {
+      padding: 3rem 0 2.5rem;
+    }
+
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 1.4rem;
+      align-items: stretch;
+    }
+
+    .hero-card {
+      padding: clamp(1.5rem, 3vw, 2.4rem);
+      padding-top: 3rem;
+      min-height: 520px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: url('hero.JP') center/cover no-repeat;
+      z-index: -2;
+      filter: saturate(0.9);
+    } 
+
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      inset: auto -20% -30% auto;
+      width: 340px;
+      height: 340px;
+      background: radial-gradient(circle, rgba(99, 255, 215, 0.22), transparent 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      width: fit-content;
+      padding: 0.45rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid rgba(99, 255, 215, 0.22);
+      background: rgba(5, 20, 22, 0.55);
+      color: var(--neon);
+      margin-bottom: 1rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      backdrop-filter: blur(8px);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 4.8rem);
+      line-height: 0.97;
+      letter-spacing: -0.05em;
+      max-width: 10ch;
+      margin-bottom: 1rem;
+      text-wrap: balance;
+    }
+
+    .hero p {
+      max-width: 56ch;
+      color: #ddf8f1;
+      margin-bottom: 1.4rem;
+      font-size: 1.03rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 0.9rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.6rem;
+    }
+
+    .hero-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+    }
+
+    .mini-stat {
+      padding: 1.2rem;
+      border-radius: 20px;
+      background: linear-gradient(180deg, rgba(13, 26, 28, 0.95), rgba(7, 17, 18, 0.95));
+      border: 1px solid rgba(99, 255, 215, 0.12);
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: 1.55rem;
+      color: var(--neon);
+      margin-bottom: 0.25rem;
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .side-box {
+      padding: 1.3rem;
+    }
+
+    .hero-banner {
+      min-height: 320px;
+      background:
+      linear-gradient(180deg, rgba(5,12,13,0.2), rgba(5,12,13,0.6)),
+      url('hero.jpg') center/cover no-repeat;
+      border-radius: 20px;
+      box-shadow: 0 0 40px rgba(99,255,215,0.15);
+    }
+
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+    }
+
+    .badge {
+      padding: 0.55rem 0.8rem;
+      border-radius: 999px;
+      background: rgba(99, 255, 215, 0.07);
+      border: 1px solid rgba(99, 255, 215, 0.15);
+      color: var(--text);
+      font-size: 0.92rem;
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      gap: 1.4rem;
+      align-items: start;
+    }
+
+    .about-copy,
+    .about-points {
+      padding: 1.6rem;
+    }
+
+    .about-copy p + p {
+      margin-top: 1rem;
+    }
+
+    .info-list {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .info-item {
+      padding: 1rem 1.05rem;
+      border-radius: 18px;
+      background: rgba(99, 255, 215, 0.04);
+      border: 1px solid rgba(99, 255, 215, 0.12);
+    }
+
+    .info-item strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      color: var(--neon);
+    }
+
+    /* SOCIAL FEED */
+    .feed-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1.4rem;
+    }
+
+    .embed-card {
+      overflow: hidden;
+      min-height: 440px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .embed-head {
+      padding: 1rem 1rem 0.9rem;
+      border-bottom: 1px solid rgba(99, 255, 215, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .embed-body {
+      flex: 1;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background:
+        linear-gradient(180deg, rgba(10, 18, 20, 0.82), rgba(7, 15, 16, 0.9)),
+        radial-gradient(circle at top, rgba(99, 255, 215, 0.08), transparent 60%);
+      text-align: center;
+    }
+
+    .embed-placeholder {
+      max-width: 28ch;
+    }
+
+    .embed-placeholder strong {
+      display: block;
+      margin-bottom: 0.55rem;
+      color: var(--neon);
+    }
+
+    .embed-note {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    /* GALLERY AD */
+    .ad-top {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.4rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .gallery-card {
+      position: relative;
+      min-height: 420px;
+      overflow: hidden;
+    }
+
+    .gallery-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(2, 10, 11, 0.08) 0%, rgba(2, 10, 11, 0.45) 55%, rgba(2, 10, 11, 0.95) 100%),
+        var(--bg-image) center/cover no-repeat;
+      transform: scale(1.01);
+      transition: transform 0.35s ease;
+    }
+
+    .gallery-card:hover::before {
+      transform: scale(1.06);
+    }
+
+    .gallery-content {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 1.15rem;
+      z-index: 1;
+    }
+
+    .gallery-content span {
+      display: inline-flex;
+      margin-bottom: 0.55rem;
+      color: var(--neon);
+      font-size: 0.86rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .gallery-content h3 {
+      font-size: 1.25rem;
+      line-height: 1.1;
+      margin-bottom: 0.45rem;
+    }
+
+    .gallery-content p {
+      color: #d0ece5;
+      font-size: 0.95rem;
+    }
+
+    /* CATALOG */
+    .catalog-panel {
+      padding: 1.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .catalog-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-row {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      padding: 0.72rem 1rem;
+      border-radius: 999px;
+      background: rgba(99, 255, 215, 0.06);
+      border: 1px solid rgba(99, 255, 215, 0.12);
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .filter-btn.active,
+    .filter-btn:hover {
+      background: linear-gradient(135deg, rgba(99, 255, 215, 0.18), rgba(32, 243, 255, 0.14));
+      box-shadow: var(--shadow);
+      color: var(--neon);
+    }
+
+    .catalog-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .product-card {
+      overflow: hidden;
+    }
+
+    .product-thumb {
+      aspect-ratio: 4 / 3;
+      background: #0c1719 center/cover no-repeat;
+      border-bottom: 1px solid rgba(99, 255, 215, 0.1);
+    }
+
+    .product-info {
+      padding: 1.1rem;
+    }
+
+    .product-head {
+      display: flex;
+      align-items: start;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .product-head h3 {
+      font-size: 1.15rem;
+      line-height: 1.15;
+    }
+
+    .price {
+      color: var(--neon);
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .product-meta {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin: 0.7rem 0 1rem;
+    }
+
+    .chip {
+      font-size: 0.85rem;
+      padding: 0.36rem 0.65rem;
+      border-radius: 999px;
+      border: 1px solid rgba(99, 255, 215, 0.12);
+      color: var(--muted);
+      background: rgba(99, 255, 215, 0.04);
+    }
+
+    .product-actions {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    /* CONTACT */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.95fr;
+      gap: 1rem;
+    }
+
+    .contact-box,
+    .social-box {
+      padding: 1.4rem;
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 0.95rem;
+      margin-top: 1rem;
+    }
+
+    .contact-line {
+      display: flex;
+      align-items: start;
+      gap: 0.85rem;
+      padding: 0.95rem 1rem;
+      border-radius: 16px;
+      background: rgba(99, 255, 215, 0.04);
+      border: 1px solid rgba(99, 255, 215, 0.1);
+    }
+
+    .social-links {
+      display: grid;
+      gap: 0.8rem;
+      margin-top: 1rem;
+    }
+
+    .social-link {
+      padding: 1rem 1.05rem;
+      border-radius: 18px;
+      background: rgba(99, 255, 215, 0.05);
+      border: 1px solid rgba(99, 255, 215, 0.12);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    /* FOOTER */
+    .site-footer {
+      padding: 1.4rem 0 2rem;
+      color: var(--muted);
+    }
+
+    .footer-wrap {
+      border-top: 1px solid rgba(99, 255, 215, 0.1);
+      padding-top: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 1080px) {
+      .hero-wrap,
+      .about-grid,
+      .contact-grid,
+      .catalog-grid,
+      .gallery-grid,
+      .feed-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .section {
+        padding: 4rem 0;
+      }
+
+      .nav {
+        align-items: start;
+        flex-direction: column;
+        padding: 1rem 0;
+      }
+
+      .nav-links {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .hero-card {
+        min-height: 470px;
+      }
+
+      .hero-mini-grid,
+      .about-grid,
+      .contact-grid,
+      .feed-grid,
+      .gallery-grid,
+      .catalog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .ad-top,
+      .catalog-controls,
+      .footer-wrap {
+        align-items: start;
+        flex-direction: column;
+      }
+
+      .section-title {
+        max-width: 14ch;
+      }
+
+      .side-img {
+        width: 100%;
+        border-radius: 14px;
+        margin-bottom: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio de Bambú Studio">
+        <!-- Reemplaza el src por tu logo real -->
+        <img class="brand-logo" src="logo-bambu.png" alt="Logo de Bambú Studio" />
+        <div class="brand-text">
+          <strong>Bambú Studio</strong>
+          <span>Sublimación & diseños personalizados</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#quienes-somos">¿Quiénes Somos?</a>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="container hero-wrap">
+        <article class="hero-card glow-card">
+          <span class="hero-tag">Diseños que destacan</span>
+          <h1>Personalizamos tus ideas con estilo.</h1>
+          <p>
+            En Bambú Studio convertimos tus ideas en productos con identidad propia. Trabajamos sublimación,
+            piezas personalizadas y diseños digitales listos para entregar o imprimir.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#catalogo">Ver catálogo</a>
+            <a class="btn btn-secondary" href="#contacto">Contactar</a>
+          </div>
+
+          <div class="hero-mini-grid">
+            <div class="mini-stat glow-card">
+              <strong>5+</strong>
+              <span class="muted">líneas personalizadas</span>
+            </div>
+            <div class="mini-stat glow-card">
+              <strong>Aragua</strong>
+              <span class="muted">atención local</span>
+            </div>
+            <div class="mini-stat glow-card">
+              <strong>Digital</strong>
+              <span class="muted">diseños listos para usar</span>
+            </div>
+          </div>
+        </article>
+
+        <aside class="hero-side">
+          <div class="side-box glow-card hero-banner"></div>
+
+          <div class="side-box glow-card">
+           <img src="tu-imagen.JPG" alt="Productos Bambú Studio" class="side-img">
+         </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="quienes-somos">
+      <div class="container about-grid">
+        <article class="about-copy glow-card">
+          <div class="section-kicker">¿Quiénes somos?</div>
+          <h2 class="section-title">Bambú Studio crea productos personalizados con identidad.</h2>
+          <p class="muted">
+            Somos <strong>Bambú Studio</strong>, un equipo de sublimación del estado Aragua enfocado en sublimación y diseño
+            digital. Nos especializamos en transformar ideas en piezas visuales y productos personalizados que se ven
+            modernos, cuidados y listos para destacar en cualquier ocasión.
+          </p>
+          <p class="muted">
+            Trabajamos sublimación de <strong>franelas, tazas, platos, termos y bolsos</strong>. Además, realizamos
+            <strong>diseños digitales listos</strong> para quienes solo necesitan la parte creativa y desean imprimir o
+            usar sus diseños en otros formatos.
+          </p>
+          <p class="muted">
+            Actualmente atendemos desde <strong>Maracay, estado Aragua</strong>, y realizamos entregas en
+            <strong>4 puntos de la Ciudad Jardín</strong>. Nuestro objetivo es ofrecer un servicio cercano, visualmente
+            atractivo y adaptado a lo que cada cliente quiere comunicar con su producto.
+          </p>
+        </article>
+
+        <aside class="about-points glow-card">
+          <div class="section-kicker">Puntos clave</div>
+          <div class="info-list">
+            <div class="info-item">
+              <strong>Sublimación personalizada</strong>
+              <span class="muted">Productos pensados para regalos, marcas personales, promociones y ocasiones especiales.</span>
+            </div>
+            <div class="info-item">
+              <strong>Diseño digital listo para usar</strong>
+              <span class="muted">También trabajamos piezas gráficas para quienes solo necesitan el arte final.</span>
+            </div>
+            <div class="info-item">
+              <strong>Atención local en Maracay</strong>
+              <span class="muted">Entregas en puntos acordados de la Ciudad Jardín y contacto directo por redes y WhatsApp.</span>
+            </div>
+            <div class="info-item">
+              <strong>Imagen moderna</strong>
+              <span class="muted">Estética oscura, elegante y llamativa, ideal para proyectar una marca actual.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="publicaciones">
+      <div class="container">
+        <div class="section-kicker">Redes en vivo</div>
+        <h2 class="section-title">Publicaciones y videos con previsualización</h2>
+        <p class="muted" style="max-width: 70ch;">
+          Esta sección está lista para mostrar contenido de Instagram y TikTok. En este prototipo dejé tarjetas de
+          previsualización. Luego puedes reemplazarlas por embeds reales con tus enlaces de publicaciones.
+        </p>
+
+        <div class="feed-grid">
+          <article class="embed-card glow-card">
+            <div class="embed-head">
+              <strong>Instagram Post</strong>
+              <span class="muted">@bambustudio.ve</span>
+            </div>
+            <div class="embed-body">
+              <div class="embed-placeholder">
+                <strong>Vista previa de publicación</strong>
+                <p class="muted">Aquí puedes insertar un post embebido de Instagram con una publicación destacada de tu trabajo.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="embed-card glow-card">
+            <div class="embed-head">
+              <strong>Instagram Reel</strong>
+              <span class="muted">Contenido vertical</span>
+            </div>
+            <div class="embed-body">
+              <div class="embed-placeholder">
+                <strong>Vista previa de reel</strong>
+                <p class="muted">Perfecto para mostrar procesos de sublimación, resultados o antes y después.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="embed-card glow-card">
+            <div class="embed-head">
+              <strong>TikTok Video</strong>
+              <span class="muted">Bambú Studio</span>
+            </div>
+            <div class="embed-body">
+              <div class="embed-placeholder">
+                <strong>Vista previa de TikTok</strong>
+                <p class="muted">Ideal para subir videos cortos de productos terminados, empaques y diseños en tendencia.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="embed-note">
+          Cuando tengas tus links, puedes pegar aquí los códigos oficiales de inserción de Instagram y TikTok.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="promocion">
+      <div class="container">
+        <div class="ad-top">
+          <div>
+            <div class="section-kicker">Publicidad visual</div>
+            <h2 class="section-title">Destaca tus productos con una galería personalizada</h2>
+          </div>
+          <a class="btn btn-primary" href="#catalogo">Observar catálogo y precios</a>
+        </div>
+
+        <div class="gallery-grid">
+          <article class="gallery-card glow-card" style="--bg-image: url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80');">
+            <div class="gallery-content">
+              <span>Personalizado 01</span>
+              <h3>Franelas con diseños únicos</h3>
+              <p>Reemplaza esta imagen por tu fotografía personalizada y muestra tu mejor trabajo.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card glow-card" style="--bg-image: url('https://images.unsplash.com/photo-1514228742587-6b1558fcf93a?auto=format&fit=crop&w=1200&q=80');">
+            <div class="gallery-content">
+              <span>Personalizado 02</span>
+              <h3>Tazas y detalles especiales</h3>
+              <p>Ideal para promocionar regalos, fechas especiales y piezas por encargo.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card glow-card" style="--bg-image: url('https://images.unsplash.com/photo-1585386959984-a41552231658?auto=format&fit=crop&w=1200&q=80');">
+            <div class="gallery-content">
+              <span>Personalizado 03</span>
+              <h3>Diseños para emprendedores</h3>
+              <p>Muestra productos para marcas, eventos, uniformes o merchandising personalizado.</p>
+            </div>
+          </article>
+
+          <article class="gallery-card glow-card" style="--bg-image: url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80');">
+            <div class="gallery-content">
+              <span>Personalizado 04</span>
+              <h3>Estilo visual que vende</h3>
+              <p>Usa este espacio para una imagen de impacto con productos terminados y branding.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="catalogo">
+      <div class="container">
+        <div class="section-kicker">Catálogo dinámico</div>
+        <h2 class="section-title">Productos y precios actualizables</h2>
+        <p class="muted" style="max-width: 72ch; margin-bottom: 1rem;">
+          Este catálogo funciona con JavaScript y puede crecer fácilmente. Puedes cambiar imágenes, nombres, precios y
+          categorías desde un solo bloque de datos sin rehacer toda la web.
+        </p>
+
+        <div class="catalog-panel glow-card">
+          <div class="catalog-controls">
+            <div class="filter-row" id="filters"></div>
+            <a class="btn btn-secondary" href="#contacto">Consultar disponibilidad</a>
+          </div>
+        </div>
+
+        <div class="catalog-grid" id="catalog-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="container contact-grid">
+        <article class="contact-box glow-card">
+          <div class="section-kicker">Contacto</div>
+          <h2 class="section-title">Hablemos de tu próximo diseño</h2>
+          <p class="muted">
+            Si deseas cotizar, pedir un producto personalizado o solicitar solo el diseño digital, puedes escribirnos
+            por WhatsApp o Instagram.
+          </p>
+
+          <div class="contact-list">
+            <div class="contact-line">
+              <div>
+                <strong>Ubicación</strong>
+                <p class="muted">Maracay, estado Aragua · Entregas en 4 puntos de la Ciudad Jardín</p>
+              </div>
+            </div>
+            <div class="contact-line">
+              <div>
+                <strong>WhatsApp</strong>
+                <p class="muted"><a href="https://wa.me/584243283555" target="_blank" rel="noopener">+58 424-328-3555</a></p>
+              </div>
+            </div>
+            <div class="contact-line">
+              <div>
+                <strong>Instagram</strong>
+                <p class="muted"><a href="https://instagram.com/bambustudio.ve" target="_blank" rel="noopener">@bambustudio.ve</a></p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <aside class="social-box glow-card">
+          <div class="section-kicker">Síguenos</div>
+          <p class="muted">
+            Agrega aquí todas tus redes principales para reforzar la presencia de marca y llevar visitas desde la web a
+            tus perfiles sociales.
+          </p>
+
+          <div class="social-links">
+            <a class="social-link" href="https://instagram.com/bambustudio.ve" target="_blank" rel="noopener">
+              <span>Instagram</span>
+              <strong>@bambustudio.ve</strong>
+            </a>
+            <a class="social-link" href="https://wa.me/584243283555" target="_blank" rel="noopener">
+              <span>WhatsApp</span>
+              <strong>+58 424-328-3555</strong>
+            </a>
+            <a class="social-link" href="#" aria-label="Agrega tu TikTok cuando lo tengas listo">
+              <span>TikTok</span>
+              <strong>@tuusuario</strong>
+            </a>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-wrap">
+      <p>© <span id="year"></span> Bambú Studio. Todos los derechos reservados.</p>
+      <p>Diseño web oscuro con acentos neón para una presencia moderna y llamativa.</p>
+    </div>
+  </footer>
+
+  <script>
+   let products = [];
+
+const catalogGrid = document.getElementById("catalog-grid");
+const filters = document.getElementById("filters");
+const year = document.getElementById("year");
+
+year.textContent = new Date().getFullYear();
+
+let currentFilter = "Todos";
+
+function createWhatsAppLink(productName) {
+  const message = `Hola, me interesa ${productName}. ¿Podrían darme más información?`;
+  return `https://wa.me/584243283555?text=${encodeURIComponent(message)}`;
+}
+
+function renderFilters() {
+  const categories = ["Todos", ...new Set(products.map(p => p.category))];
+
+  filters.innerHTML = categories
+    .map(category => `
+      <button class="filter-btn ${category === currentFilter ? "active" : ""}" data-category="${category}">
+        ${category}
+      </button>
+    `)
+    .join("");
+
+  document.querySelectorAll(".filter-btn").forEach(button => {
+    button.addEventListener("click", () => {
+      currentFilter = button.dataset.category;
+      renderFilters();
+      renderProducts();
+    });
+  });
+}
+
+function renderProducts() {
+  const visibleProducts =
+    currentFilter === "Todos"
+      ? products
+      : products.filter(p => p.category === currentFilter);
+
+  catalogGrid.innerHTML = visibleProducts
+    .map(product => `
+      <article class="product-card glow-card">
+        <div class="product-thumb" style="background-image:url('${product.image}')"></div>
+        <div class="product-info">
+          <div class="product-head">
+            <h3>${product.name}</h3>
+            <span class="price">${product.price}</span>
+          </div>
+          <p class="muted">${product.note}</p>
+          <div class="product-meta">
+            <span class="chip">${product.category}</span>
+            ${product.tags.map(tag => `<span class="chip">${tag}</span>`).join("")}
+          </div>
+          <div class="product-actions">
+            <a class="btn btn-primary" href="${createWhatsAppLink(product.name)}" target="_blank">
+              Pedir por WhatsApp
+            </a>
+          </div>
+        </div>
+      </article>
+    `)
+    .join("");
+}
+
+// 🔥 AQUÍ CARGAS EL JSON
+fetch("products.json")
+  .then(res => res.json())
+  .then(data => {
+    products = data;
+    renderFilters();
+    renderProducts();
+  })
+  .catch(err => {
+    console.error("Error cargando productos:", err);
+  });
+  </script>
+</body>
+</html>

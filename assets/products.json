@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Franela personalizada",
+    "category": "Franelas",
+    "price": "$8",
+    "note": "Diseño full color para uso personal, regalos o emprendimientos.",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Sublimación", "Color completo"]
+  },
+  {
+    "name": "Taza personalizada",
+    "category": "Tazas",
+    "price": "$5",
+    "note": "Perfecta para regalos, detalles corporativos o fechas especiales.",
+    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcf93a?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Cerámica", "Regalo"]
+  },
+  {
+    "name": "Termo personalizado",
+    "category": "Termos",
+    "price": "$10",
+    "note": "Diseños resistentes y llamativos para uso diario o branding.",
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Personalizado", "Premium"]
+  },
+  {
+    "name": "Plato decorativo",
+    "category": "Platos",
+    "price": "$9",
+    "note": "Ideal para detalles, recuerdos o celebraciones especiales.",
+    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Decoración", "Eventos"]
+  },
+  {
+    "name": "Bolso personalizado",
+    "category": "Bolsos",
+    "price": "$7",
+    "note": "Bolso práctico con identidad visual para promociones o uso diario.",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Merch", "Útil"]
+  },
+  {
+    "name": "Diseño digital listo",
+    "category": "Diseños",
+    "price": "$6",
+    "note": "Archivo digital para clientes que solo necesitan el arte final.",
+    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    "tags": ["Digital", "Entrega online"]
+  }
+]
