@@ -1,10 +1,10 @@
 [
   {
-    "name": "Franela personalizada",
+    "name": "Franela Blanca personalizada",
     "category": "Franelas",
-    "price": "$8",
-    "note": "Diseño full color para uso personal, regalos o emprendimientos.",
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80",
+    "price": "$6",
+    "note": "Color blanco para uso personal, regalos o emprendimientos.",
+    "image": "yisel.png",
     "tags": ["Sublimación", "Color completo"]
   },
   {
@@ -12,39 +12,70 @@
     "category": "Tazas",
     "price": "$5",
     "note": "Perfecta para regalos, detalles corporativos o fechas especiales.",
-    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcf93a?auto=format&fit=crop&w=1200&q=80",
+    "image": "tazacata.png",
     "tags": ["Cerámica", "Regalo"]
   },
   {
     "name": "Termo personalizado",
     "category": "Termos",
-    "price": "$10",
-    "note": "Diseños resistentes y llamativos para uso diario o branding.",
-    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?auto=format&fit=crop&w=1200&q=80",
+    "price": "$15",
+    "note": "Ideal para llevarlo contigo",
+    "image": "termocat.png",
     "tags": ["Personalizado", "Premium"]
   },
   {
-    "name": "Plato decorativo",
-    "category": "Platos",
-    "price": "$9",
+    "name": "Llavero personalizado",
+    "category": "Llavero",
+    "price": "$3",
     "note": "Ideal para detalles, recuerdos o celebraciones especiales.",
-    "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80",
+    "image": "Llaveritos.png",
     "tags": ["Decoración", "Eventos"]
   },
   {
-    "name": "Bolso personalizado",
-    "category": "Bolsos",
-    "price": "$7",
-    "note": "Bolso práctico con identidad visual para promociones o uso diario.",
-    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=1200&q=80",
-    "tags": ["Merch", "Útil"]
-  },
-  {
-    "name": "Diseño digital listo",
-    "category": "Diseños",
-    "price": "$6",
+    "name": "Argentina & CR7",
+    "category": "Diseños-Llaveros",
+    "price": "$3",
     "note": "Archivo digital para clientes que solo necesitan el arte final.",
-    "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80",
+    "image": "goats.png",
+    "tags": ["Digital", "Entrega online"]
+  },
+   {
+    "name": "Rawayana",
+    "category": "Diseños-Llaveros",
+    "price": "$3",
+    "note": "Archivo digital para clientes que solo necesitan el arte final.",
+    "image": "rawayana.png",
+    "tags": ["Digital", "Entrega online"]
+  },
+   {
+    "name": "Morat",
+    "category": "Diseños-Llaveros",
+    "price": "$3",
+    "note": "Archivo digital para clientes que solo necesitan el arte final.",
+    "image": "morichal.png",
+    "tags": ["Digital", "Entrega online"]
+  },
+   {
+    "name": "Día de las madres",
+    "category": "Diseños-Llaveros",
+    "price": "$3",
+    "note": "Archivo digital para clientes que solo necesitan el arte final.",
+    "image": "mamases.png",
+    "tags": ["Digital", "Entrega online"]
+  },
+   {
+    "name": "Canserbero 1",
+    "category": "Diseños-Llaveros",
+    "price": "$3",
+    "note": "Archivo digital para clientes que solo necesitan el arte final.",
+    "image": "canchelbelo.png",
+    "tags": ["Digital", "Entrega online"]
+  },
+     {
+    "name": "Alleh & Yorghaki 1",
+    "category": "Diseños-Llaveros",
+    "price": "$3",
+    "note": "allehcat.png",
     "tags": ["Digital", "Entrega online"]
   }
 ]
