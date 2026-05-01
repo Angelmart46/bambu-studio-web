@@ -32,7 +32,7 @@
     "tags": ["Decoración", "Eventos"]
   },
   {
-    "name": "Argentina & CR7",
+    "name": "Argentina & CR7-Llavero",
     "category": "Diseños-Llaveros",
     "price": "$3",
     "note": "Archivo digital para clientes que solo necesitan el arte final.",
@@ -40,7 +40,7 @@
     "tags": ["Digital", "Entrega online"]
   },
    {
-    "name": "Rawayana",
+    "name": "Rawayana-Llavero",
     "category": "Diseños-Llaveros",
     "price": "$3",
     "note": "Archivo digital para clientes que solo necesitan el arte final.",
@@ -48,7 +48,7 @@
     "tags": ["Digital", "Entrega online"]
   },
    {
-    "name": "Morat",
+    "name": "Morat-Llavero",
     "category": "Diseños-Llaveros",
     "price": "$3",
     "note": "Archivo digital para clientes que solo necesitan el arte final.",
@@ -56,7 +56,7 @@
     "tags": ["Digital", "Entrega online"]
   },
    {
-    "name": "Día de las madres",
+    "name": "Llavero Día de las madres",
     "category": "Diseños-Llaveros",
     "price": "$3",
     "note": "Archivo digital para clientes que solo necesitan el arte final.",
@@ -64,7 +64,7 @@
     "tags": ["Digital", "Entrega online"]
   },
    {
-    "name": "Canserbero 1",
+    "name": "Canserbero-Llavero",
     "category": "Diseños-Llaveros",
     "price": "$3",
     "note": "Archivo digital para clientes que solo necesitan el arte final.",
@@ -72,10 +72,11 @@
     "tags": ["Digital", "Entrega online"]
   },
      {
-    "name": "Alleh & Yorghaki 1",
+    "name": "Alleh & Yorghaki-Llavero",
     "category": "Diseños-Llaveros",
     "price": "$3",
     "note": "allehcat.png",
     "tags": ["Digital", "Entrega online"]
+  },
   }
 ]
