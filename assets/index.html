@@ -210,6 +210,45 @@
       text-shadow: 0 0 12px rgba(99, 255, 215, 0.25);
     }
 
+    .menu-toggle {
+      display: none;
+      width: 46px;
+      height: 46px;
+      padding: 0;
+      border-radius: 14px;
+      background: rgba(99, 255, 215, 0.06);
+      border: 1px solid rgba(99, 255, 215, 0.18);
+      color: var(--text);
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 22px;
+      height: 2px;
+      background: var(--neon);
+      border-radius: 999px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      box-shadow: 0 0 10px rgba(99, 255, 215, 0.35);
+    }
+
+    .menu-toggle span + span {
+      margin-top: 5px;
+    }
+
+    .site-header.menu-open .menu-toggle span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .site-header.menu-open .menu-toggle span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .site-header.menu-open .menu-toggle span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
+
     /* HERO */
     .hero {
       padding: 3rem 0 2.5rem;
@@ -679,14 +718,47 @@
       }
 
       .nav {
-        align-items: start;
+        min-height: 72px;
+        padding: 0.75rem 0;
+        flex-wrap: wrap;
+      }
+
+      .brand {
+        max-width: calc(100% - 62px);
+      }
+
+      .menu-toggle {
+        display: inline-flex;
         flex-direction: column;
-        padding: 1rem 0;
       }
 
       .nav-links {
         width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        visibility: hidden;
+        flex-direction: column;
+        align-items: stretch;
         justify-content: flex-start;
+        gap: 0.35rem;
+        padding: 0;
+        transition: max-height 0.3s ease, opacity 0.25s ease, padding 0.25s ease, visibility 0.25s ease;
+      }
+
+      .site-header.menu-open .nav-links {
+        max-height: 260px;
+        opacity: 1;
+        visibility: visible;
+        padding: 0.8rem 0 0.35rem;
+      }
+
+      .nav-links a {
+        width: 100%;
+        padding: 0.85rem 1rem;
+        border-radius: 14px;
+        background: rgba(99, 255, 215, 0.05);
+        border: 1px solid rgba(99, 255, 215, 0.1);
       }
 
       .hero-card {
@@ -733,7 +805,13 @@
         </div>
       </a>
 
-      <nav class="nav-links" aria-label="Navegación principal">
+      <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="main-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="main-menu" aria-label="Navegación principal">
         <a href="#quienes-somos">¿Quiénes Somos?</a>
         <a href="#catalogo">Catálogo</a>
         <a href="#contacto">Contacto</a>
@@ -831,58 +909,30 @@
     <section class="section" id="publicaciones">
       <div class="container">
         <div class="section-kicker">Redes en vivo</div>
-        <h2 class="section-title">Publicaciones y videos con previsualización</h2>
+        <h2 class="section-title">Llaveros personalizados que hablan por ti</h2>
         <p class="muted" style="max-width: 70ch;">
-          Esta sección está lista para mostrar contenido de Instagram y TikTok. En este prototipo dejé tarjetas de
-          previsualización. Luego puedes reemplazarlas por embeds reales con tus enlaces de publicaciones.
+         Diseñamos llaveros únicos con tu estilo, nombre o marca.
+Ideales para regalos, emprendimientos o detalles especiales.
+Escríbenos y crea el tuyo.
         </p>
 
         <div class="feed-grid">
-          <article class="embed-card glow-card">
-            <div class="embed-head">
-              <strong>Instagram Post</strong>
-              <span class="muted">@bambustudio.ve</span>
-            </div>
-            <div class="embed-body">
-              <div class="embed-placeholder">
-                <strong>Vista previa de publicación</strong>
-                <p class="muted">Aquí puedes insertar un post embebido de Instagram con una publicación destacada de tu trabajo.</p>
-              </div>
-            </div>
-          </article>
+  <article class="embed-card glow-card single-post">
+    <div class="embed-head">
+      <strong>Instagram</strong>
+      <span class="muted">@bambustudio.ve</span>
+    </div>
 
-          <article class="embed-card glow-card">
-            <div class="embed-head">
-              <strong>Instagram Reel</strong>
-              <span class="muted">Contenido vertical</span>
-            </div>
-            <div class="embed-body">
-              <div class="embed-placeholder">
-                <strong>Vista previa de reel</strong>
-                <p class="muted">Perfecto para mostrar procesos de sublimación, resultados o antes y después.</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="embed-card glow-card">
-            <div class="embed-head">
-              <strong>TikTok Video</strong>
-              <span class="muted">Bambú Studio</span>
-            </div>
-            <div class="embed-body">
-              <div class="embed-placeholder">
-                <strong>Vista previa de TikTok</strong>
-                <p class="muted">Ideal para subir videos cortos de productos terminados, empaques y diseños en tendencia.</p>
-              </div>
-            </div>
-          </article>
-        </div>
-
-        <p class="embed-note">
-          Cuando tengas tus links, puedes pegar aquí los códigos oficiales de inserción de Instagram y TikTok.
-        </p>
-      </div>
-    </section>
+    <div class="embed-body">
+      <blockquote 
+        class="instagram-media" 
+        data-instgrm-permalink="https://www.instagram.com/p/DXzCH9_Ear3/" 
+        data-instgrm-version="14"
+        style="max-width: 420px; width:100%;">
+      </blockquote>
+    </div>
+  </article>
+</div>
 
     <section class="section" id="promocion">
       <div class="container">
@@ -895,35 +945,24 @@
         </div>
 
         <div class="gallery-grid">
-          <article class="gallery-card glow-card" style="--bg-image: url('https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=1200&q=80');">
+          <article class="gallery-card glow-card" style="--bg-image: url('camisestor.png');">
             <div class="gallery-content">
               <span>Personalizado 01</span>
               <h3>Franelas con diseños únicos</h3>
-              <p>Reemplaza esta imagen por tu fotografía personalizada y muestra tu mejor trabajo.</p>
             </div>
           </article>
 
-          <article class="gallery-card glow-card" style="--bg-image: url('https://images.unsplash.com/photo-1514228742587-6b1558fcf93a?auto=format&fit=crop&w=1200&q=80');">
+          <article class="gallery-card glow-card" style="--bg-image: url('tazin.png');">
             <div class="gallery-content">
               <span>Personalizado 02</span>
               <h3>Tazas y detalles especiales</h3>
-              <p>Ideal para promocionar regalos, fechas especiales y piezas por encargo.</p>
             </div>
           </article>
 
-          <article class="gallery-card glow-card" style="--bg-image: url('https://images.unsplash.com/photo-1585386959984-a41552231658?auto=format&fit=crop&w=1200&q=80');">
+          <article class="gallery-card glow-card" style="--bg-image: url('llavero.png');">
             <div class="gallery-content">
               <span>Personalizado 03</span>
-              <h3>Diseños para emprendedores</h3>
-              <p>Muestra productos para marcas, eventos, uniformes o merchandising personalizado.</p>
-            </div>
-          </article>
-
-          <article class="gallery-card glow-card" style="--bg-image: url('https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=1200&q=80');">
-            <div class="gallery-content">
-              <span>Personalizado 04</span>
-              <h3>Estilo visual que vende</h3>
-              <p>Usa este espacio para una imagen de impacto con productos terminados y branding.</p>
+              <h3>Llaveros</h3>
             </div>
           </article>
         </div>
@@ -934,10 +973,6 @@
       <div class="container">
         <div class="section-kicker">Catálogo dinámico</div>
         <h2 class="section-title">Productos y precios actualizables</h2>
-        <p class="muted" style="max-width: 72ch; margin-bottom: 1rem;">
-          Este catálogo funciona con JavaScript y puede crecer fácilmente. Puedes cambiar imágenes, nombres, precios y
-          categorías desde un solo bloque de datos sin rehacer toda la web.
-        </p>
 
         <div class="catalog-panel glow-card">
           <div class="catalog-controls">
@@ -1021,6 +1056,23 @@
 const catalogGrid = document.getElementById("catalog-grid");
 const filters = document.getElementById("filters");
 const year = document.getElementById("year");
+const header = document.querySelector(".site-header");
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelectorAll(".nav-links a");
+
+menuToggle.addEventListener("click", () => {
+  const isOpen = header.classList.toggle("menu-open");
+  menuToggle.setAttribute("aria-expanded", isOpen);
+  menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+});
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    header.classList.remove("menu-open");
+    menuToggle.setAttribute("aria-expanded", "false");
+    menuToggle.setAttribute("aria-label", "Abrir menú");
+  });
+});
 
 year.textContent = new Date().getFullYear();
 
