@@ -72,10 +72,11 @@
     "tags": ["Digital", "Entrega online"]
   },
      {
-    "name": "Alleh & Yorghaki-Llavero",
+    "name": "Alleh & Yorghaki 1",
     "category": "Diseños-Llaveros",
     "price": "$3",
-    "note": "allehcat.png",
+    "note": "Puedes agregar tu banda musical de tu preferencia",
+    "image": "allehcat.png",
     "tags": ["Digital", "Entrega online"]
   }
 ]
