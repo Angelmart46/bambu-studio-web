@@ -48,9 +48,9 @@
     "tags": ["Digital", "Entrega online"]
   },
    {
-    "name": "Morat-Llavero",
-    "category": "Diseños-Llaveros",
-    "price": "$3",
+    "name": "Morat",
+    "category": "Diseños",
+    "price": "-",
     "note": "Archivo digital para clientes que solo necesitan el arte final.",
     "image": "morichal.png",
     "tags": ["Digital", "Entrega online"]
