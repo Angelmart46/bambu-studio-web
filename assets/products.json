@@ -2,7 +2,7 @@
   {
     "name": "Franela Blanca personalizada",
     "category": "Franelas",
-    "price": "$6",
+    "price": "$7",
     "note": "Color blanco para uso personal, regalos o emprendimientos.",
     "image": "yisel.png",
     "tags": ["Sublimación", "Color completo"]
@@ -10,7 +10,7 @@
   {
     "name": "Taza personalizada",
     "category": "Tazas",
-    "price": "$5",
+    "price": "$6",
     "note": "Perfecta para regalos, detalles corporativos o fechas especiales.",
     "image": "tazacata.png",
     "tags": ["Cerámica", "Regalo"]
@@ -26,23 +26,23 @@
   {
     "name": "Llavero personalizado",
     "category": "Llavero",
-    "price": "$3",
+    "price": "$2",
     "note": "Ideal para detalles, recuerdos o celebraciones especiales.",
     "image": "Llaveritos.png",
     "tags": ["Decoración", "Eventos"]
   },
   {
     "name": "Argentina & CR7-Llavero",
-    "category": "Diseños-Llaveros",
-    "price": "$3",
+    "category": "Diseños",
+    "price": "-",
     "note": "Archivo digital para clientes que solo necesitan el arte final.",
     "image": "goats.png",
     "tags": ["Digital", "Entrega online"]
   },
    {
-    "name": "Rawayana-Llavero",
-    "category": "Diseños-Llaveros",
-    "price": "$3",
+    "name": "Rawayana",
+    "category": "Diseños",
+    "price": "-",
     "note": "Archivo digital para clientes que solo necesitan el arte final.",
     "image": "rawayana.png",
     "tags": ["Digital", "Entrega online"]
@@ -57,24 +57,64 @@
   },
    {
     "name": "Llavero Día de las madres",
-    "category": "Diseños-Llaveros",
-    "price": "$3",
+    "category": "Diseños",
+    "price": "-",
     "note": "Archivo digital para clientes que solo necesitan el arte final.",
     "image": "mamases.png",
     "tags": ["Digital", "Entrega online"]
   },
    {
-    "name": "Canserbero-Llavero",
-    "category": "Diseños-Llaveros",
-    "price": "$3",
+    "name": "Canserbero",
+    "category": "Diseños",
+    "price": "-",
     "note": "Archivo digital para clientes que solo necesitan el arte final.",
     "image": "canchelbelo.png",
     "tags": ["Digital", "Entrega online"]
   },
+  {
+    "name": "The Beattles",
+    "category": "Diseños",
+    "price": "-",
+    "note": "Archivo digital para clientes que solo necesitan el arte final.",
+    "image": "beattles.png",
+    "tags": ["Digital", "Entrega online"]
+  },
+  {
+    "name": "Star Wars 1",
+    "category": "Diseños",
+    "price": "-",
+    "note": "Archivo digital para clientes que solo necesitan el arte final.",
+    "image": "wars1.png",
+    "tags": ["Digital", "Entrega online"]
+  },
+   {
+    "name": "Star Wars 2",
+    "category": "Diseños",
+    "price": "-",
+    "note": "Archivo digital para clientes que solo necesitan el arte final.",
+    "image": "wars2.png",
+    "tags": ["Digital", "Entrega online"]
+  },
+   {
+    "name": "Noche estrellada",
+    "category": "Diseños",
+    "price": "-",
+    "note": "Archivo digital para clientes que solo necesitan el arte final.",
+    "image": "vicente.png",
+    "tags": ["Digital", "Entrega online"]
+  },
+   {
+    "name": "Noche estrellada versión girasol",
+    "category": "Diseños",
+    "price": "-",
+    "note": "Archivo digital para clientes que solo necesitan el arte final.",
+    "image": "vicente2.png",
+    "tags": ["Digital", "Entrega online"]
+  },
      {
     "name": "Alleh & Yorghaki 1",
-    "category": "Diseños-Llaveros",
-    "price": "$3",
+    "category": "Diseños",
+    "price": "-",
     "note": "Puedes agregar tu banda musical de tu preferencia",
     "image": "allehcat.png",
     "tags": ["Digital", "Entrega online"]
