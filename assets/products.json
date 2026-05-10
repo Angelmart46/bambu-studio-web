@@ -92,7 +92,7 @@
     "category": "Diseños",
     "price": "-",
     "note": "Archivo digital para clientes que solo necesitan el arte final.",
-    "image": "wars2.jpg",
+    "image": "wars2.jpeg",
     "tags": ["Digital", "Entrega online"]
   },
    {
@@ -109,6 +109,14 @@
     "price": "-",
     "note": "Archivo digital para clientes que solo necesitan el arte final.",
     "image": "vicente2.png",
+    "tags": ["Digital", "Entrega online"]
+  },
+   {
+    "name": "Uchiha Itachi",
+    "category": "Diseños",
+    "price": "-",
+    "note": "Archivo digital para clientes que solo necesitan el arte final.",
+    "image": "onicha.png",
     "tags": ["Digital", "Entrega online"]
   },
      {
